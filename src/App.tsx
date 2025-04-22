@@ -25,7 +25,7 @@ export const App: React.FC = () => {
   });
 
   const SortA = () => {
-    const sorted = [...visibleGoods].sort((good1, good2) => {
+    const sorted = [...goodsFromServer].sort((good1, good2) => {
       return good1.localeCompare(good2);
     });
 
@@ -34,7 +34,7 @@ export const App: React.FC = () => {
   };
 
   const SortByLength = () => {
-    const sorted = [...visibleGoods].sort((good1, good2) => {
+    const sorted = [...goodsFromServer].sort((good1, good2) => {
       const lengthComparison = good1.length - good2.length;
 
       if (lengthComparison === 0) {
